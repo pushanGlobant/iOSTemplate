@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOSTemplate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click here to receive user information from server" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8w-cB-dAO">
+                                <rect key="frame" x="10" y="67" width="300" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="Tbz-9E-8Hv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NW4-Ms-1CN">
+                                <rect key="frame" x="10" y="116" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="sdK-vS-yGy"/>
+                                </constraints>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1M7-zm-69T"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click here to retrieve the last saved user information" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cN-nH-VxU">
+                                <rect key="frame" x="10" y="166" width="300" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="qBy-Do-n2S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDe-dL-L9N">
+                                <rect key="frame" x="10" y="215" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="uXL-QV-47F"/>
+                                </constraints>
+                                <state key="normal" title="Info"/>
+                                <connections>
+                                    <action selector="infoPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xlB-GT-wem"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click here to download a file" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOQ-HG-yE9">
+                                <rect key="frame" x="10" y="265" width="300" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="HFo-Lb-lOV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfm-ii-5a6">
+                                <rect key="frame" x="10" y="314" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Wkg-40-KTa"/>
+                                </constraints>
+                                <state key="normal" title="Download"/>
+                                <connections>
+                                    <action selector="downloadPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H55-8l-4dI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click here to upload a file" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4x-Q0-Vts">
+                                <rect key="frame" x="10" y="364" width="300" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="PgR-hP-FBh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGq-Gc-0EI">
+                                <rect key="frame" x="10" y="413" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7da-Mf-UEh"/>
+                                </constraints>
+                                <state key="normal" title="Upload"/>
+                                <connections>
+                                    <action selector="uploadPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tA2-3c-o4N"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.49843164126751444" green="0.84943589313564782" blue="0.98670059442520142" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="L4x-Q0-Vts" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="A1V-wc-TOB"/>
+                            <constraint firstItem="bGq-Gc-0EI" firstAttribute="top" secondItem="L4x-Q0-Vts" secondAttribute="bottom" constant="8" id="B8Z-hl-KNm"/>
+                            <constraint firstItem="JDe-dL-L9N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="Eok-C7-SqW"/>
+                            <constraint firstAttribute="trailing" secondItem="1cN-nH-VxU" secondAttribute="trailing" constant="10" id="HUN-Jc-v7u"/>
+                            <constraint firstAttribute="trailing" secondItem="EOQ-HG-yE9" secondAttribute="trailing" constant="10" id="I0R-aU-7qQ"/>
+                            <constraint firstItem="1cN-nH-VxU" firstAttribute="top" secondItem="NW4-Ms-1CN" secondAttribute="bottom" constant="20" id="MiM-Ra-6ik"/>
+                            <constraint firstAttribute="trailing" secondItem="L4x-Q0-Vts" secondAttribute="trailing" constant="10" id="P5p-7u-DWe"/>
+                            <constraint firstItem="dfm-ii-5a6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="PDf-C1-rxG"/>
+                            <constraint firstAttribute="trailing" secondItem="JDe-dL-L9N" secondAttribute="trailing" constant="10" id="PwE-f8-WO9"/>
+                            <constraint firstItem="NW4-Ms-1CN" firstAttribute="top" secondItem="C8w-cB-dAO" secondAttribute="bottom" constant="8" id="Tfa-6N-aw7"/>
+                            <constraint firstItem="C8w-cB-dAO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="47" id="WzC-kb-d8P"/>
+                            <constraint firstItem="EOQ-HG-yE9" firstAttribute="top" secondItem="JDe-dL-L9N" secondAttribute="bottom" constant="20" id="YNz-SR-q1C"/>
+                            <constraint firstAttribute="trailing" secondItem="C8w-cB-dAO" secondAttribute="trailing" constant="10" id="btC-jv-hPv"/>
+                            <constraint firstAttribute="trailing" secondItem="bGq-Gc-0EI" secondAttribute="trailing" constant="10" id="fZL-j0-Cg9"/>
+                            <constraint firstItem="EOQ-HG-yE9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="gNy-Hk-Rch"/>
+                            <constraint firstItem="L4x-Q0-Vts" firstAttribute="top" secondItem="dfm-ii-5a6" secondAttribute="bottom" constant="20" id="gpu-63-fzK"/>
+                            <constraint firstItem="dfm-ii-5a6" firstAttribute="top" secondItem="EOQ-HG-yE9" secondAttribute="bottom" constant="8" id="iZ9-7W-f0N"/>
+                            <constraint firstItem="NW4-Ms-1CN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="iiu-FK-UKK"/>
+                            <constraint firstAttribute="trailing" secondItem="dfm-ii-5a6" secondAttribute="trailing" constant="10" id="kMY-bK-fLi"/>
+                            <constraint firstItem="1cN-nH-VxU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="po6-I5-ege"/>
+                            <constraint firstAttribute="trailing" secondItem="NW4-Ms-1CN" secondAttribute="trailing" constant="10" id="t71-00-fud"/>
+                            <constraint firstItem="C8w-cB-dAO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="u2f-lu-dT5"/>
+                            <constraint firstItem="JDe-dL-L9N" firstAttribute="top" secondItem="1cN-nH-VxU" secondAttribute="bottom" constant="8" id="xbu-V9-AyE"/>
+                            <constraint firstItem="bGq-Gc-0EI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="yGh-YP-xNG"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="askDownloadLabel" destination="EOQ-HG-yE9" id="UrT-8g-PIh"/>
+                        <outlet property="askInfoLabel" destination="1cN-nH-VxU" id="sQV-2t-JjH"/>
+                        <outlet property="askLoginLabel" destination="C8w-cB-dAO" id="aWa-lv-HrF"/>
+                        <outlet property="askUploadLabel" destination="L4x-Q0-Vts" id="NMh-bp-AaD"/>
+                        <outlet property="downloadButton" destination="dfm-ii-5a6" id="L5C-W4-U9q"/>
+                        <outlet property="infoButton" destination="JDe-dL-L9N" id="Qi3-vU-Ala"/>
+                        <outlet property="loginButton" destination="NW4-Ms-1CN" id="3w5-WU-mti"/>
+                        <outlet property="uploadButton" destination="bGq-Gc-0EI" id="esR-O9-k99"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="158" y="215"/>
+        </scene>
+    </scenes>
+</document>

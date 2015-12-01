@@ -1,0 +1,58 @@
+===========================================================================
+iOSTemplate - Usage Guide
+
+* The Template can be viewed as a combination of the following segments
+
+    - Core Reusable Components
+        - Core Web Service Management (HTTPServiceProtocol, Reachability)
+        - Core Database Management (DatabaseCore)
+        - Other reusable utility features (Error, Logger, LocalizationUtility)
+
+    - Appplication Logic Layer (implemented as demonstration)
+        - HTTP Networking Service Classes (LoginWebService, DownloadService, UploadService)
+        - Database Service Class (DatabaseService)
+
+    - Business Objects (implemented as demonstration)
+        - Business Object for Person
+
+    - Controllers (implemented as demonstration)
+        - The ViewController class
+
+
+* The Core Reusable Components can be reused in a new project. The Appplication Logic Layer and other segments can be developed according to the project-specific requirements.
+
+* Steps for creating a new Service for HTTP Connection:
+    - Create a new class for the Service. This class should conform to HTTPServiceProtocol.
+    - In the newly created Service Class, implement the methods for the functionalities of the Service. It can call the default implementations of HTTPServiceProtocol or add its own functionalities.
+    - The Service class may opt to have its own Delegation protocol or blocks/closures using which it can communicate with its caller about the status of HTTP connection, success, failure etc.
+
+* Steps to replace Alamofire with another HTTP Networking framework:
+    - Update the Podfile with the new framework specifications. Run 'pod update' on terminal from the project directory.
+    - Modify the default implementation of HTTPServiceProtocol (in extension) for introducing the new framework.
+    - The goal would be to make the Service Classes independent of the choice of the underlying HTTP Networking framework.
+
+* Steps for adding data into Database:
+    - Create a model class for the entity to be saved in database. This class should inherit from RealmSwift.Object.
+    - Access the methods of DatabaseCore class for saving/retrieving data for this entity from the Realm database.
+    - The DatabaseService class contains the interface to interact with the DatabaseCore class.
+
+* Steps to replace Realm with another Database Management framework:
+    - Modify the DatabaseCore class according to the features of the chosen framework.
+    - Check for the inheritance alterations required for the model entity classes.
+    - The goal would be to make the DatabaseService class independent of the underlying Database Management framework.
+
+* Steps to use ObjectMapper framework:
+    - ObjectMapper is a framework that allows us to convert model objects (classes and structures) to and from JSON.
+    - To support mapping, a Class or Struct needs to implement the ObjectMapper.Mappable protocol. The 'mapping' method should map its properties to JSON keys using the <- operator.
+    - The ObjectMapper.Mapper class provides methods for extracting model objects from JSON as well as methods for creating JSON from model objects.
+
+* Steps to use Reachability class (Apple provided):
+    - Reachability instance can be initialized using host name or address. Alternatively, Reachability instances can be initialized for Local Wifi or Internet Connection.
+    - The method currentReachabilityStatus provides the current network state.
+    - A notification (kReachabilityChangedNotification) is also available to detect a change in network state. Notifier methods can be enabled/disabled using startNotifier and stopNotifier methods.
+
+* Steps to use Localization in code:
+    - Add new key value pairs in Localizable.strings files.
+    - The file LocalizationUtility provides an extension of String with the purpose of localization. To get the localized string for a key "ExampleKey", one can simply call '"ExampleKey".localized'.
+
+===========================================================================

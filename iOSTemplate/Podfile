@@ -1,0 +1,19 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '8.0'
+
+target 'iOSTemplate' do
+use_frameworks!
+pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git'
+pod 'ObjectMapper'
+pod 'Realm', :git => 'https://github.com/realm/realm-cocoa.git', :branch => 'swift-2.0'
+pod 'RealmSwift', :git => 'https://github.com/realm/realm-cocoa.git', :branch => 'swift-2.0'
+end
+
+target 'iOSTemplate Tests' do
+use_frameworks!
+pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git'
+pod 'ObjectMapper'
+pod 'Realm', :git => 'https://github.com/realm/realm-cocoa.git', :branch => 'swift-2.0'
+pod 'RealmSwift', :git => 'https://github.com/realm/realm-cocoa.git', :branch => 'swift-2.0'
+end
+
